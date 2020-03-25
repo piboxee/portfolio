@@ -1,5 +1,22 @@
 {% extends "base.html" %} {% load static %} {% block content %}
 
+    <!-- Slider Section Start -->
+	<div class="slider-area slider-three slider-bg-3">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="slider-text ptb-275">
+						<h1 class="font-50 mb-5 white-color">Hello <br /> I Am Valentin Piho </h1>
+						<p>I am a Junior Full-stack Web Developer <br />
+							Feel free to check out my articles, projects and blog posts <br />
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    <!-- Slider Section End -->
+    
 	<!-- Services Section Start -->
 	<div class="service-area service-one white-bg section-padding">
 		<div class="container">
@@ -73,12 +90,12 @@
         <div class="container">
             <div class="row text-center">
                 <div class="col-xs-12 col-sm-8 col-md-6 col-text-center">
-                    <div class="section-title pb-80">
+                    <div class="section-title">
                         <h2>Hire Me</h2>
                         <p>So are you looking for a professional, communicative & punctual software engineer with extensive web development skills? <br />
                             If you have an application you are interested in developing, a problem that needs solving or a project that needs rescuing, I'd love to help you with it. </p>
                             <br />
-                        <a href="javascript:viod(0)" class="btn" >Hire</a>
+                        <a href="{% url 'contact' %}" class="btn" >Hire</a>
                     </div>
                 </div>
             </div>

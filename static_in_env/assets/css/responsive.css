@@ -6,8 +6,12 @@
 
 	.slider-bg-3 {
 	  background-color: #24201d;
-	  background-position: 40% 50%;
-	  background-size: auto 90%;
+	  background-position: 40% 60%;
+	  background-size: auto auto;
+	}
+	.ptb-275 {
+		padding-bottom: 175px;
+		padding-top: 175px;
 	}
 	.two-style6 .grid-item:hover .project-title,
 	.two-style6 .project-title {
@@ -31,8 +35,12 @@
 	}
 	.slider-bg-3 {
 	  background-color: #24201d;
-	  background-position: 45% 60%;
-	  background-size: auto 80%;
+	  background-position: 40% 60%;
+	  background-size: auto auto;
+	}
+	.ptb-275 {
+	  padding-bottom: 175px;
+	  padding-top: 175px;
 	}
 	.portfolio-five .grid-item:hover .project-title {
 	  bottom: 25%;
@@ -83,15 +91,15 @@
 	  padding-top: 175px;
 	}
 	.col-xs-12.no-padding{
-		padding: 0 15px;
+	  padding: 0 15px;
 	}
 	.tablet-mb-50{
-		margin-bottom: 50px;
+	  margin-bottom: 50px;
 	}
 	.slider-bg-3 {
 	  background-color: #24201d;
-	  background-position: 45% 60%;
-	  background-size: auto 80%;
+	  background-position: 40% 60%;
+	  background-size: auto auto;
 	}
 	
 	.navbar-header {
@@ -211,8 +219,8 @@
 	}
 	.slider-bg-3 {
 	  background-color: #24201d;
-	  background-position: 50% 35%;
-	  background-size: auto 50%;
+	  background-position: 40% 60%;
+	  background-size: auto auto;
 	}
 	.testimonial-item {
 	  padding: 0;
@@ -307,7 +315,7 @@
 	.slider-bg-3 {
 	  background-color: #24201d;
 	  background-position: 40% 60%;
-	  background-size: auto 70%;
+	  background-size: auto auto;
 	}
 	.slider-five {
 	  height: 365px;

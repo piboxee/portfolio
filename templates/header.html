@@ -7,7 +7,7 @@
 					<div class="col-xs-12 col-sm-2 col-md-3">
 						<div class="left">
 							<div class="logo">
-								<a href="#"><img src="{% static "assets/img/logo.png" %}" alt="MiniPo" />
+								<a href="{% url 'index' %}"><img src="{% static "assets/img/logo.png" %}" alt="MiniPo" />
 								</a>
 							</div>
 						</div>
@@ -24,12 +24,11 @@
 								</div>
 								<div class="navbar-collapse collapse clearfix">
                                     <ul class="navigation clearfix">
-                                        <li><a href="#">Home</a></li>
-                                        <li><a href="#">About Me</a></li>
-                                        <li><a href="#">Portfolio</a></li>
-                                        <li><a href="#">Blog</a></li>
-                                        <li><a href="#">Services</a></li>
-                                        <li><a href="#">Contact Me</a></li>
+                                        <li><a href="{% url 'index' %}">Home</a></li>
+                                        <li><a href="{% url 'about' %}">About Me</a></li>
+                                        <li><a href="{% url 'project_index' %}">Portfolio</a></li>
+                                        <li><a href="{% url 'blog_index' %}">Blog</a></li>
+                                        <li><a href="{% url 'contact' %}">Contact Me</a></li>
                                     </ul>
 								</div>
 							</nav>

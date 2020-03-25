@@ -1,0 +1,58 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+
+<!-- Header Space -->
+<div class="header-space"></div>
+<!-- Header Section End -->
+<!-- Contact Area Start -->
+<div class="contact-area contact-one section-padding white-bg">
+    <div class="container">
+        <div class="row" >
+            <div class="col-xs-12 col-md-6">
+                <div>
+                    <div class="info-text">
+                        <h2>Contact Info:</h2>
+                        <p class="mb-30">If you’d like to chat about a project please fill in the form below and I’ll get back within 1-2 days.<br />
+                            I’m currently looking for new projects or job offers
+                        </p>
+                        <ul>
+                            <li class="mb-15"><span>Address:</span> Tallinn, Estonia</li>
+                            <li><span>Phone:</span><a href="tel:+37256643626"> +372 56643626</a></li>
+                            <li class="email-lower"><span>Email:</span><a href="mailto:val.piho@gmail.com"> val.piho@gmail.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <div>
+                    <div class="contact-form">
+                        <form class="custom-input contact_form" id="contact_form" action="contact-form.php" method="post">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6">
+                                    <input type="text" id="contact_name" name="name" placeholder="Your Name" required />
+                                </div>
+                                <div class="col-xs-12 col-sm-6">
+                                    <input type="email" id="contact_email" name="email" placeholder="Your Email" required />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6">
+                                    <input type="text" id="contact_phone" name="phone" placeholder="Phone" />
+                                </div>
+                                <div class="col-xs-12 col-sm-6">
+                                    <input type="text" id="contact_website" name="website" placeholder="Website" />
+                                </div>
+                            </div>
+                            <textarea name="message" id="contact_message" rows="2" placeholder="Message"></textarea>
+                            <button class="btn" type="submit" name="submit" id="contact_submit" data-complete-text="Well done!">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Contact Area End -->
+
+{% endblock %}

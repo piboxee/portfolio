@@ -2212,9 +2212,12 @@
 	}
 }
  
- footer .left p,
+ footer .left p {
+    color: #878787;
+    font-size: 15px;
+ }
  footer .left p a {
-     color: #878787;
+     color: #d45500;
      font-size: 15px;
  }
  .footer-widget ul li a:hover,
@@ -2588,11 +2591,20 @@
      position: relative;
      top: -26px;
  }
- .skills.design {
-     width: 80%;
+ .skills.react {
+     width: 40%;
  }
  .skills.html {
-     width: 90%;
+     width: 83%;
+ }
+ .skills.python {
+     width: 65%;
+ }
+ .skills.java {
+     width: 42%;
+ }
+ .skills.sql {
+     width: 66%;
  }
  .skills.wordpress {
      width: 70%;
@@ -2676,10 +2688,13 @@
      color: #c4c4c4;
      font-size: 14px;
  }
+ .contact-area .info-text .email-lower a{
+     text-transform: lowercase;
+ }
  .contact-area .custom-input .btn {
      background-color: #edf1f5;
-     border: 1px solid transparent;
-     color: #7c7c7c;
+     border: 1px solid #d45500;
+     color: #d45500;
      font-family: "Lato", sans-serif;
      padding: 0 40px;
      text-transform: uppercase;
@@ -2689,19 +2704,6 @@
      background-color: transparent;
      border-color: #edf1f5;
      color: #333333;
- }
- 
- /* Google Map */
- #googleMap.google-map {
-     height: 480px;
-     width: 100%;
- }
- /* Mobile Screen Support */
- @media (max-width: 767px) {
-     #googleMap.google-map {
-         height: 350px;
-         width: 100%;
-     }
  }
  
  /* Portfolio Pages 
@@ -2987,109 +2989,7 @@
      font-size: 16px;
      line-height: 28px;
  }
- /* Coming Soon 
---------------*/
- 
- .vbox-content .venoframe {
-     cursor: default;
- }
- .vbox-content .venoframe,
- .vbox-open .contact-area .col-md-10 {
-     width: 100%;
- }
- /* Countdown */
- 
- #timer > div {
-     color: #232323;
-     float: left;
-     font-size: 60px;
-     line-height: 1;
-     padding: 0 30px;
-     text-align: center;
- }
- #timer > div h4 {
-     text-transform: uppercase;
-     margin: 5px 0 0 0;
-     font-size: 16px;
- }
- /* Small Mobile :320px. */
- 
- @media (max-width: 767px) {
-     .coming-header.height-100 {
-         height: auto;
-     }
-     .coming-soon p {
-         font-size: 16px;
-         line-height: 26px;
-     }
-     #timer > div {
-         color: #232323;
-         float: left;
-         font-size: 50px;
-         line-height: 1;
-         padding: 10px 30px;
-         text-align: center;
-     }
- }
- /* Large Mobile :480px */
- 
- @media only screen and (min-width: 480px) and (max-width: 767px) {
-     #timer > div {
-         padding: 0 20px;
-     }
- }
- /* 
-[ 6. Loding Bar ]
-===================================*/
- 
- #loading-wrap {
-     background-color: #ffffff;
-     height: 100%;
-     position: fixed;
-     width: 100%;
-     z-index: 100000;
-     top: 0;
-     left: 0;
- }
- .loading-effect {
-     width: 50px;
-     height: 50px;
-     position: absolute;
-     top: 50%;
-     left: 50%;
-     margin: -25px 0 0 -25px;
-     font-size: 10px;
-     text-indent: -12345px;
-     border-top: 1px solid rgba(49, 47, 47, 0.08);
-     border-right: 1px solid rgba(49, 47, 47, 0.08);
-     border-bottom: 1px solid rgba(49, 47, 47, 0.08);
-     border-left: 1px solid rgba(49, 47, 47, 0.5);
-     border-radius: 50%;
-     -webkit-animation: spinner 700ms infinite linear;
-     animation: spinner 700ms infinite linear;
-     z-index: 100001;
- }
- @-webkit-keyframes spinner {
-     0% {
-         -webkit-transform: rotate(0deg);
-         transform: rotate(0deg);
-     }
-     100% {
-         -webkit-transform: rotate(360deg);
-         transform: rotate(360deg);
-     }
- }
- @keyframes spinner {
-     0% {
-         -webkit-transform: rotate(0deg);
-         transform: rotate(0deg);
-     }
-     100% {
-         -webkit-transform: rotate(360deg);
-         transform: rotate(360deg);
-     }
- }
- /* 
+
 [ 6. ScrollUp ]
 ===================================*/
  
