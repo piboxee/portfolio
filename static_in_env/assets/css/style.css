@@ -564,52 +564,9 @@
  .bg-color-3 {
      background: #f5f5f5 none repeat scroll 0 0;
  }
- /* background image 
-==================================*/
- 
- .bg-img-1 {
-     background-image: url("../img/bg/1.jpg");
- }
- .bg-img-2 {
-     background-image: url("../img/bg/2.jpg");
- }
- .slider-bg-1 {
-     background-attachment: scroll;
-     background-image: url("../img/slider/1.jpg");
-     background-repeat: no-repeat;
-     background-size: cover;
-     background-position: center;
- }
- .slider-bg-2 {
-     background-image: url("../img/slider/2.jpg");
-     background-repeat: no-repeat;
-     background-attachment: scroll;
-     background-size: cover;
-     background-position: center;
- }
+
  .slider-bg-3 {
      background-image: url("../img/slider/3.jpg");
-     background-repeat: no-repeat;
-     background-attachment: scroll;
-     background-size: cover;
-     background-position: center;
- }
- .slider-bg-4 {
-     background-image: url("../img/slider/4.jpg");
-     background-repeat: no-repeat;
-     background-attachment: scroll;
-     background-size: cover;
-     background-position: center;
- }
- .slider-bg-5 {
-     background-image: url("../img/slider/5.jpg");
-     background-repeat: no-repeat;
-     background-attachment: scroll;
-     background-size: cover;
-     background-position: center;
- }
- .slider-bg-6 {
-     background-image: url("../img/slider/6.jpg");
      background-repeat: no-repeat;
      background-attachment: scroll;
      background-size: cover;
@@ -1749,15 +1706,6 @@
 	background-color: #737373;
 }
 
-/* Video Background */
-.video-bg{
-	background-image: url('../img/slider/video-bg.jpg');
-	background-size: cover;
-}
-.slider-area.video-bg {
-  height: 800px;
-}
-
 /* Normal Dasktop Screen Support */
 @media (min-width: 992px) and (max-width: 1200px) {
 	.ptb-340 {
@@ -2397,20 +2345,11 @@
  }
  /* Blog Details
 --------------- */
- 
- .single-post.medium-post .blog-text p {
-     color: #8d8d8d;
-     font-size: 16px;
-     line-height: 26px;
- }
  .blog-footer .share-btn a:hover {
      color: #fff!important;
  }
- .blog-details .medium-post .blog-text {
-     padding: 60px 0 75px;
- }
- .blog-details .white-box {
-     padding: 45px 35px;
+ .medium-post .comment-area {
+     padding: 54px;
  }
  .comment-area h3 {
      color: #545454;
@@ -2426,9 +2365,6 @@
  }
  .comment-area input[type="submit"]:hover {
      background: #000000 none repeat scroll 0 0;
- }
- .blog-details .pb-100 .medium-post .blog-text {
-     padding: 60px 0 100px;
  }
  .single-comment h4 {
      color: #686868;
@@ -2991,6 +2927,7 @@
      line-height: 28px;
  }
 
+/*
 [ 6. ScrollUp ]
 ===================================*/
  
