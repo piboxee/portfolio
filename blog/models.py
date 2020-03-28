@@ -15,6 +15,12 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
+    def summary(self):
+        return self.description[:350] + ' ...'
+
+    def date_published(self):
+        return self.published.strftime('%B %Y')
+
     def get_absolute_url(self):
         return f'/blog/{self.slug}/'
 

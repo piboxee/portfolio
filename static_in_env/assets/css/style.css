@@ -2027,10 +2027,11 @@
      padding-bottom: 3px;
  }
  .blog-footer .pull-right > a {
-     color: #b0b0b0;
-     font-size: 16px;
-     line-height: 1;
-     padding: 0 5px;
+     border-bottom: 1px solid #d8d8d8;
+     color: #d45500;
+     font-size: 12px;
+     font-weight: 300;
+     padding-bottom: 3px;
  }
  .medium-post .blog-footer > a:hover,
  .blog-text .blog-footer a:hover {
@@ -2277,7 +2278,7 @@
      font-size: 18px;
  }
  .widget-title h4 {
-     color: #757575;
+     color: #d45500;
  }
  .widget .search-box form {
      position: relative;
