@@ -26,6 +26,9 @@ def post_details(request, slug):
 
 
 def post_create(request):
+    if not request.user.is_authenticated:
+        return redirect('/blog/')
+
     author, created = Author.objects.get_or_create(
         user=request.user,
         email=request.user.email,
@@ -45,6 +48,9 @@ def post_create(request):
 
 
 def post_edit(request, slug):
+    if not request.user.is_authenticated:
+        return redirect('/blog/')
+
     post = get_object_or_404(Post, slug=slug)
     form = PostModelForm(request.POST or None, request.FILES or None, instance=post)
     if form.is_valid():
@@ -59,6 +65,9 @@ def post_edit(request, slug):
 
 
 def post_delete(request, slug):
+    if not request.user.is_authenticated:
+        return redirect('/blog/')
+
     post = get_object_or_404(Post, slug=slug)
     post.delete()
 

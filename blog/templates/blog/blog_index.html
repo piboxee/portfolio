@@ -36,10 +36,12 @@
                                             <div class="pull-left">
                                                 <a href="{{ post.get_absolute_url }}">Read More</a>
                                             </div>
+                                            {% if user.is_authenticated %}
                                             <div class="pull-right">
                                                 <a href="{{ post.get_edit_url }}">Edit</a>
                                                 <a href="{{ post.get_delete_url }}">Delete</a>
                                             </div>
+                                            {% endif %}
                                         </div>
                                     </div>
                                 </div>

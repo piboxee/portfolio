@@ -1,5 +1,85 @@
-<form method="POST" action="." enctype="multipart/form-data">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" name="submit">
-</form>
+{% extends "base.html" %}{% block content %}
+
+    <!-- Header Space -->
+    <div class="header-space"></div>
+    <!-- Header Section End -->
+    <!-- Blog Section Start -->
+    <div class="blog-area light-bg section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-8 mb-minus">
+                        <div class="row">
+                            <div class="col-xs-12 mb-30">
+                                <div class="medium-post">
+                                    <div class="blog-text white-bg">
+                                        <div class="title clearfix">
+                                            <form method="POST" action="." enctype="multipart/form-data">
+                                                {% csrf_token %}
+                                                {{ form.as_p }}
+                                                <input type="submit" name="submit">
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-4">
+                    <div class="sidebar white-bg">
+
+                        <div class="widget mb-40">
+                            <div class="widget-title mb-20">
+                                <h4 class="mb-5">About Blog</h4>
+                                <hr class="line"/>
+                            </div>
+                            <div class="about">
+                                <p class="mb-20">There are many variations of passages of Lorem Ipsum available, but the
+                                    majority have suffered alteration in some form,</p>
+                                <p>many variations of passages of Lorem Iavailable, but the majority</p>
+                            </div>
+                        </div>
+
+                        <div class="widget mb-40">
+                            <div class="widget-title mb-20">
+                                <h4 class="mb-5">Categories</h4>
+                                <hr class="line"/>
+                            </div>
+                            <div class="category">
+                                <ul>
+                                    <li><a href="javascript:void(0)">Journey <span>(10)</span></a></li>
+                                    <li><a href="javascript:void(0)">Design <span>(12)</span></a></li>
+                                    <li><a href="javascript:void(0)">Development <span>(08)</span></a></li>
+                                    <li><a href="javascript:void(0)">Spotrs <span>(03)</span></a></li>
+                                    <li><a href="javascript:void(0)">Photography <span>(05)</span></a></li>
+                                    <li><a href="javascript:void(0)">Minimal <span>(07)</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="widget mb-40">
+                            <div class="widget-title mb-20">
+                                <h4 class="mb-5">tags</h4>
+                                <hr class="line"/>
+                            </div>
+                            <div class="tags">
+                                <a href="javascript:void(0)">Journey</a>
+                                <a href="javascript:void(0)">Design</a>
+                                <a href="javascript:void(0)">Development</a>
+                                <a href="javascript:void(0)">Spotrs</a>
+                                <a href="javascript:void(0)">Photography</a>
+                                <a href="javascript:void(0)">Minimal</a>
+                                <a href="javascript:void(0)">New</a>
+                                <a href="javascript:void(0)">Corporate</a>
+                                <a href="javascript:void(0)">multi</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Sidebar End -->
+            </div>
+        </div>
+    </div>
+    <!-- Blog Section End -->
+{% endblock %}
