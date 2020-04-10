@@ -1,18 +1,16 @@
 from django.shortcuts import render, get_object_or_404
 from django.shortcuts import redirect
+from django.views.generic import ListView
 
 from .models import Post, Author
 from .forms import PostModelForm
 
 
-def blog_index(request):
-    all_posts = Post.objects.all()
-
-    context = {
-        'all_posts': all_posts
-    }
-
-    return render(request, 'blog/blog_index.html', context)
+class BlogListView(ListView):
+    queryset = Post.published.all()
+    context_object_name = 'all_posts'
+    paginate_by = 5
+    template_name = 'blog/blog_index.html'
 
 
 def post_details(request, slug):

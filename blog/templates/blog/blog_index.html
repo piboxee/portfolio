@@ -20,7 +20,7 @@
                                     <div class="blog-text white-bg">
                                         <div class="title clearfix">
                                             <div class="post-date pull-left">
-                                                <h1 class="font-50 no-margin">{{ post.published.day }}</h1>
+                                                <h1 class="font-50 no-margin">{{ post.published_date.day }}</h1>
                                                 <h6 class="no-margin">{{ post.date_published }}</h6>
                                             </div>
                                             <div class="title-like">
@@ -48,6 +48,19 @@
                             </div>
                         </div>
                     {% endfor %}
+                    <div class="pagination">
+                        <span class="step-links">
+                            {% if page.has_previous %}
+                                <a href="?page={{ page.previous_page_number }}">Previous</a>
+                            {% endif %}
+                            <span class="current">
+                                Page {{ page.number }} of {{ page.paginator.num_pages }}
+                            </span>
+                            {% if page.has_next %}
+                                <a href="?page={{ page.next_page_number }}">Next</a>
+                            {% endif %}
+                        </span>
+                    </div>
                 </div>
 
                 <div class="col-xs-12 col-sm-4">
