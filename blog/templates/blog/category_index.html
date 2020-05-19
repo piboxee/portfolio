@@ -1,0 +1,123 @@
+{% extends "base.html" %}{% block content %}
+
+    <!-- Header Space -->
+    <div class="header-space"></div>
+    <!-- Header Section End -->
+    <!-- Blog Section Start -->
+    <div class="blog-area light-bg section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-8 mb-minus">
+                    {% for post in all_posts %}
+                        <div class="row">
+                            <div class="col-xs-12 mb-30">
+                                <div class="medium-post">
+                                    <div class="thumb">
+                                        <a href="{{ post.get_absolute_url }}">
+                                            <img src="{{ post.image.url }}" alt="Blog Thumbnail"/>
+                                        </a>
+                                    </div>
+                                    <div class="blog-text white-bg">
+                                        <div class="title clearfix">
+                                            <div class="post-date pull-left">
+                                                <h1 class="font-50 no-margin">{{ post.published_date.day }}</h1>
+                                                <h6 class="no-margin">{{ post.date_published }}</h6>
+                                            </div>
+                                            <div class="title-like">
+                                                <a href="{{ post.get_absolute_url }}"><h4>{{ post.title }}</h4></a>
+                                                <div class="comm-icon">
+                                                    <a href="#"><i class="zmdi zmdi-favorite-outline"></i> Like</a>
+                                                    <a href="#"><i class="zmdi zmdi-comment-outline"></i> Comment</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="ptb-20">{{ post.summary }}</p>
+                                        <div class="blog-footer">
+                                            <div class="pull-left">
+                                                <a href="{{ post.get_absolute_url }}">Read More</a>
+                                            </div>
+                                            {% if user.is_authenticated %}
+                                            <div class="pull-right">
+                                                <a href="{{ post.get_edit_url }}">Edit</a>
+                                                <a href="{{ post.get_delete_url }}">Delete</a>
+                                            </div>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                    <div class="pagination">
+                        <span class="step-links">
+                            {% if page.has_previous %}
+                                <a href="?page={{ page.previous_page_number }}">Previous</a>
+                            {% endif %}
+                            <span class="current">
+                                Page {{ page.number }} of {{ page.paginator.num_pages }}
+                            </span>
+                            {% if page.has_next %}
+                                <a href="?page={{ page.next_page_number }}">Next</a>
+                            {% endif %}
+                        </span>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-4">
+                    <div class="sidebar white-bg">
+
+                        <div class="widget mb-40">
+                            <div class="widget-title mb-20">
+                                <h4 class="mb-5">About Blog</h4>
+                                <hr class="line"/>
+                            </div>
+                            <div class="about">
+                                <p class="mb-20">There are many variations of passages of Lorem Ipsum available, but the
+                                    majority have suffered alteration in some form,</p>
+                                <p>many variations of passages of Lorem Iavailable, but the majority</p>
+                            </div>
+                        </div>
+
+                        <div class="widget mb-40">
+                            <div class="widget-title mb-20">
+                                <h4 class="mb-5">Categories</h4>
+                                <hr class="line"/>
+                            </div>
+                            <div class="category">
+                                <ul>
+                                    <li><a href="javascript:void(0)">Journey <span>(10)</span></a></li>
+                                    <li><a href="javascript:void(0)">Design <span>(12)</span></a></li>
+                                    <li><a href="javascript:void(0)">Development <span>(08)</span></a></li>
+                                    <li><a href="javascript:void(0)">Spotrs <span>(03)</span></a></li>
+                                    <li><a href="javascript:void(0)">Photography <span>(05)</span></a></li>
+                                    <li><a href="javascript:void(0)">Minimal <span>(07)</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="widget mb-40">
+                            <div class="widget-title mb-20">
+                                <h4 class="mb-5">tags</h4>
+                                <hr class="line"/>
+                            </div>
+                            <div class="tags">
+                                <a href="javascript:void(0)">Journey</a>
+                                <a href="javascript:void(0)">Design</a>
+                                <a href="javascript:void(0)">Development</a>
+                                <a href="javascript:void(0)">Spotrs</a>
+                                <a href="javascript:void(0)">Photography</a>
+                                <a href="javascript:void(0)">Minimal</a>
+                                <a href="javascript:void(0)">New</a>
+                                <a href="javascript:void(0)">Corporate</a>
+                                <a href="javascript:void(0)">multi</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Sidebar End -->
+            </div>
+        </div>
+    </div>
+    <!-- Blog Section End -->
+{% endblock %}

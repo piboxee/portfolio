@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.shortcuts import redirect
 from django.views.generic import ListView
 
-from .models import Post, Author
+from .models import Post, Category
 from .forms import PostModelForm
 
 
@@ -13,8 +13,18 @@ class BlogListView(ListView):
     template_name = 'blog/blog_index.html'
 
 
-def post_details(request, slug):
-    post = get_object_or_404(Post, slug=slug)
+def blog_category_list_view(request, pk):
+    all_posts = get_object_or_404(Category.objects.all(), pk=pk)
+
+    context = {
+        'all_posts': all_posts
+    }
+
+    return render(request, 'blog/category_index.html', context)
+
+
+def post_details(request, slug, category):
+    post = get_object_or_404(Post, slug=slug, category__slug=category, status='published')
 
     context = {
         'post': post
@@ -27,14 +37,8 @@ def post_create(request):
     if not request.user.is_authenticated:
         return redirect('/blog/')
 
-    author, created = Author.objects.get_or_create(
-        user=request.user,
-        email=request.user.email,
-        cellphone_num=53782372932
-    )
     form = PostModelForm(request.POST or None, request.FILES or None)
     if form.is_valid():
-        form.instance.author = author
         form.save()
         return redirect('/blog/')
 

@@ -1,6 +1,5 @@
 from django.db import models
 from django.conf import settings
-from django.urls import reverse
 from django.utils import timezone
 
 User = settings.AUTH_USER_MODEL
@@ -22,11 +21,9 @@ class Post(models.Model):
     title = models.CharField(max_length=255)
     slug = models.SlugField(max_length=255,
                             unique_for_date='published_date')
+    category = models.ForeignKey('Category', on_delete=models.SET_DEFAULT, default='Default')
     image = models.ImageField()
     description = models.TextField()
-    author = models.ForeignKey('Author',
-                               on_delete=models.CASCADE,
-                               related_name='blog_posts')
     published_date = models.DateTimeField(default=timezone.now)
     created_date = models.DateTimeField(auto_now_add=True)
     updated_date = models.DateTimeField(auto_now=True)
@@ -50,7 +47,7 @@ class Post(models.Model):
         return self.published_date.strftime('%B %Y')
 
     def get_absolute_url(self):
-        return f'/blog/{self.slug}/'
+        return f'/blog/{self.category.slug}/{self.slug}/'
 
     def get_edit_url(self):
         return f'/blog/{self.slug}/post-edit/'
@@ -59,10 +56,14 @@ class Post(models.Model):
         return f'/blog/{self.slug}/post-delete/'
 
 
-class Author(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    email = models.EmailField()
-    cellphone_num = models.IntegerField()
+class Category(models.Model):
+    title = models.CharField(max_length=255)
+    slug = models.SlugField(max_length=255)
+    image = models.ImageField()
+    description = models.TextField()
+
+    class Meta:
+        ordering = ('title',)
 
     def __str__(self):
-        return self.user.username
+        return self.title
