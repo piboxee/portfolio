@@ -267,10 +267,7 @@
 	  padding: 30px 15px;
 	}
 	.media-body {
-		display: block;
-		overflow: visible;
 		width: auto;
-		padding-left: 30px;
 	}
 	.contact-area .pull-left ,
 	.contact-area .pull-right ,
